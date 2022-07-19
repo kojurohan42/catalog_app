@@ -35,8 +35,8 @@ class _HomePageState extends State<HomePage> {
   loadData() async {
     final catalogJson =
         await rootBundle.loadString("assets/files/catalog.json");
-        // final response = await http.get(Uri.parse(url));
-        // final catalogJson = response.body;
+    // final response = await http.get(Uri.parse(url));
+    // final catalogJson = response.body;
     final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["products"];
     CatalogModel.items = List.from(productsData)
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white,
             ),
           ).badge(
-              color: Vx.red500,
+              color: Vx.gray300,
               size: 22,
               count: _cart!.items.length,
               textStyle: TextStyle(
